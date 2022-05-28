@@ -10,10 +10,10 @@ const STORAGE_KEY = 'feedback-form-state';
 
 fillTextArea()
 
-function onFormInput(e) { 
+function onFormInput() { 
     const formData = {
-        email: e.currentTarget.elements.email.value,
-        message: e.currentTarget.elements.message.value
+        email: refs.input.value,
+        message: refs.message.value
     }
     localStorage.setItem(STORAGE_KEY, JSON.stringify(formData))
 } 
